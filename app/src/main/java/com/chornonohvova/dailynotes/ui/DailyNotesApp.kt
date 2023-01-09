@@ -17,7 +17,7 @@ fun DailyNotesApp(modifier: Modifier = Modifier) {
         modifier = modifier
     ) {
         notesScreen(
-            onNavigateToDetails = {
+            onNavigateToNoteDetails = {
                 TODO("Implement navigation to note details")
             }
         )

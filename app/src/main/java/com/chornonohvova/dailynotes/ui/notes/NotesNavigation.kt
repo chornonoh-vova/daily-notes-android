@@ -11,7 +11,7 @@ const val NotesRoute = "notes"
 
 @OptIn(ExperimentalLifecycleComposeApi::class)
 fun NavGraphBuilder.notesScreen(
-    onNavigateToDetails: (noteId: Int) -> Unit
+    onNavigateToNoteDetails: (noteId: Int) -> Unit
 ) {
     composable(NotesRoute) {
         val notesViewModel = hiltViewModel<NotesViewModel>()
@@ -19,7 +19,7 @@ fun NavGraphBuilder.notesScreen(
 
         NotesScreen(
             uiState = notesUiState.value,
-            onNavigateToDetails = onNavigateToDetails
+            onNavigateToNoteDetails = onNavigateToNoteDetails
         )
     }
 }
